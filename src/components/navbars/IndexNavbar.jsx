@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // components
 
-import IndexDropdown from "../Dropdowns/IndexDropdown.jsx";
+import IndexDropdown from "../dropdowns/IndexDropdown.jsx";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -16,7 +16,7 @@ export default function Navbar(props) {
               to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase"
             >
-              <img src="/img/logo.png" style={{width:"80px"}} />
+              <img src="/img/logo.png" style={{ width: "80px" }} />
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

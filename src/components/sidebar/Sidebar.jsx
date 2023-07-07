@@ -2,8 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import NotificationDropdown from "./../Dropdowns/NotificationDropdown.jsx";
-import UserDropdown from "./../Dropdowns/UserDropdown.jsx";
+import NotificationDropdown from "./../dropdowns/NotificationDropdown.jsx";
+import UserDropdown from "./../dropdowns/UserDropdown.jsx";
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
@@ -24,7 +24,7 @@ export default function Sidebar() {
             className="md:block text-left text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
-            <img src="/img/logo.png"  style={{width:"80px"}} />
+            <img src="/img/logo.png" style={{ width: "80px" }} />
           </Link>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
