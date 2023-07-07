@@ -11,7 +11,7 @@ import { APIKey, API_END_POINT } from "../../services/Api";
 import { api, API_END_POINT_APP } from "../../services";
 import { EN, VN, LANE } from "../../enum";
 import { getData } from "../../utils/Storage";
-import I18n from "../../language";
+// import I18n from "../../language";
 
 export function* LOADING(action) {
   try {
@@ -131,31 +131,31 @@ export function* API_spCallServerNoSQL(action) {
     action.reject(e);
   }
 }
-export function* changeLanguage(action) {
-  try {
-    const language = action.params.language;
-    const Type = action.params.Type;
-    //let newLanguage = language == VN ? EN : VN;
-    delay(300);
-    yield put({ type: mainTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
-    I18n.locale = language;
-    action.resolve(language);
-  } catch (e) {
-    action.reject(e);
-  }
-}
+// export function* changeLanguage(action) {
+//   try {
+//     const language = action.params.language;
+//     const Type = action.params.Type;
+//     //let newLanguage = language == VN ? EN : VN;
+//     delay(300);
+//     yield put({ type: mainTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
+//     I18n.locale = language;
+//     action.resolve(language);
+//   } catch (e) {
+//     action.reject(e);
+//   }
+// }
 
-export function* checkLanguage(action) {
-  try {
-    const language = yield getData(LANE);
-    const newLanguage =
-      language !== null && language !== "" && JSON.parse(language) === "en"
-        ? JSON.parse(language)
-        : "vn";
-    yield put({ type: mainTypes.CHECK_LANGUAGE_SUCCESS, payload: newLanguage });
-    I18n.locale = newLanguage;
-  } catch (e) {}
-}
+// export function* checkLanguage(action) {
+//   try {
+//     const language = yield getData(LANE);
+//     const newLanguage =
+//       language !== null && language !== "" && JSON.parse(language) === "en"
+//         ? JSON.parse(language)
+//         : "vn";
+//     yield put({ type: mainTypes.CHECK_LANGUAGE_SUCCESS, payload: newLanguage });
+//     I18n.locale = newLanguage;
+//   } catch (e) {}
+// }
 
 export function* EncryptString(action) {
   try {
