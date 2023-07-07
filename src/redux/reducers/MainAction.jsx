@@ -1,17 +1,16 @@
-import { mainTypes } from '../Actions'
+import { mainTypes } from "../actions";
 const initialState = {
-    IsLoading: false
+  IsLoading: false,
 };
 
 export default function (state = initialState, action = {}) {
-    switch (action.type) {
-        
-        case mainTypes.LOADING_SUCCESS:
-            return {
-                ...state,
-                IsLoading: action.payload
-            }
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case mainTypes.LOADING_SUCCESS:
+      return {
+        ...state,
+        IsLoading: action.payload,
+      };
+    default:
+      return state;
+  }
 }
