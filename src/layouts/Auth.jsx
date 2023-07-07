@@ -2,12 +2,12 @@ import React from "react";
 import { Router, Route } from "react-router-dom";
 
 // components
-import Navbar from "../components/Navbars/AuthNavbar.jsx"
-import FooterSmall from "../components/Footers/FooterSmall.jsx"; 
+import Navbar from "../components/navbars/AuthNavbar.jsx";
+import FooterSmall from "../components/footers/FooterSmall.jsx";
 
 // views
-import Login from "../views/Auth/Login.jsx";
-import Register from "../views/Auth/Register.jsx";
+import Login from "../views/auth/Login.jsx";
+import Register from "../views/auth/Register.jsx";
 
 export default function Auth({ children, ...rest }) {
   return (
@@ -18,8 +18,7 @@ export default function Auth({ children, ...rest }) {
           <div
             className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
             style={{
-              backgroundImage:
-                "url(" + "/img/register_bg_2.png" + ")",
+              backgroundImage: "url(" + "/img/register_bg_2.png" + ")",
             }}
           ></div>
           {/* <Router>
